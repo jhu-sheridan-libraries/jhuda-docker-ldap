@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile-test
+    command: /run_tests.sh
+    depends_on:
+      - ldap
+
+  ldap:
+    image: jhuda/ldap:latest
+    build:
+      context: .
+    container_name: ldap
