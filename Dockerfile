@@ -23,7 +23,7 @@ RUN useradd ldapadmin \
     && setup-ds.pl --silent --file /ds-setup.inf \
     && /usr/sbin/ns-slapd -D /etc/dirsrv/slapd-dir \
     && sleep 10 \
-    && ldapadd -H ldap:/// -f /users.ldif -x -D "cn=admin" -w password
+    && ldapadd -H ldap:/// -f /users.ldif -x -D "cn=admin,dc=archive" -w password
 
 EXPOSE 389
 

@@ -1,5 +1,5 @@
 [General]
-AdminDomain =pass
+AdminDomain =archive
 ConfigDirectoryAdminID = admin
 ConfigDirectoryAdminPwd = admin
 ConfigDirectoryLdapURL = ldap://localhost:389/o=NetscapeRoot
@@ -19,7 +19,7 @@ SysUser = nobody
 AddOrgEntries = Yes
 AddSampleEntries = No
 InstallLdifFile = suggest
-RootDN = cn=admin
+RootDN = cn=admin,dc=archive
 RootDNPwd = password
 ServerIdentifier = dir
 ServerPort = 389
