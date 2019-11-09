@@ -22,7 +22,7 @@ RUN useradd ldapadmin \
     && sed -i '/if (@errs = startServer($inf))/,/}/d' /usr/lib64/dirsrv/perl/* \
     && setup-ds.pl --silent --file /ds-setup.inf \
     && /usr/sbin/ns-slapd -D /etc/dirsrv/slapd-dir \
-    && sleep 10 \
+    && sleep 30 \
     && ldapadd -H ldap:/// -f /users.ldif -x -D "cn=admin,dc=archive" -w password
 
 EXPOSE 389
